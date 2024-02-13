@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div th:if="${param.error}">
+    Email ou Senha Inválidos
+</div>
+<div th:if="${param.logout}">
+    Você Saiu Da Conta Com Sucesso!
+</div>
+<form method="post" role="form" th:action="@{/login}">
+    <input
+
+        id="username"
+        type="text"
+        class=""
+        placeholder="Nome De Usuario"
+        name="username"
+    >
+    <input
+        id="password"
+        type="password"
+        class=""
+        placeholder="Senha"
+        name="password"
+    >
+    <div>
+        <p>Não Possue Uma Conta?</p>
+        <button th:href="@{/register}" type="submit">Registre-se</button>
+        <button type="submit" value="Log in">Entrar</button>
+    </div>
+
+
+</form>
+
+</body>
+</html>
