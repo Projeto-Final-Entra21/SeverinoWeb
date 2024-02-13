@@ -1,7 +1,7 @@
-package severino.com.tentativa2.service;
+package severino.com.severino.service;
 
-import severino.com.tentativa2.dto.RegistrationDto;
-import severino.com.tentativa2.models.UserEntity;
+import severino.com.severino.dto.RegistrationDto;
+import severino.com.severino.models.UserEntity;
 
 public interface UserService {
     void saveUser(RegistrationDto registrationDto);

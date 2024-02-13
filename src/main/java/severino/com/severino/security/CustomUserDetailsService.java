@@ -1,4 +1,4 @@
-package severino.com.tentativa2.security;
+package severino.com.severino.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import severino.com.tentativa2.models.UserEntity;
-import severino.com.tentativa2.repository.UserRepository;
+import severino.com.severino.models.UserEntity;
+import severino.com.severino.repository.UserRepository;
 
 import java.util.stream.Collectors;
 

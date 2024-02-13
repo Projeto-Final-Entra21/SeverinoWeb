@@ -1,11 +1,10 @@
-package severino.com.tentativa2.models;
+package severino.com.severino.models;
 
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Getter

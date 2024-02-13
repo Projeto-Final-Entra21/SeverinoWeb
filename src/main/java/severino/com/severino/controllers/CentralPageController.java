@@ -1,4 +1,4 @@
-package severino.com.tentativa2.controllers;
+package severino.com.severino.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

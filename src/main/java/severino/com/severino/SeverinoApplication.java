@@ -1,13 +1,13 @@
-package severino.com.tentativa2;
+package severino.com.severino;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Tentativa2Application {
+public class SeverinoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Tentativa2Application.class, args);
+        SpringApplication.run(SeverinoApplication.class, args);
     }
 
 }

@@ -1,14 +1,14 @@
-package severino.com.tentativa2.service.impl;
+package severino.com.severino.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import severino.com.tentativa2.dto.RegistrationDto;
-import severino.com.tentativa2.models.Role;
-import severino.com.tentativa2.models.UserEntity;
-import severino.com.tentativa2.repository.RoleRepository;
-import severino.com.tentativa2.repository.UserRepository;
-import severino.com.tentativa2.service.UserService;
+import severino.com.severino.dto.RegistrationDto;
+import severino.com.severino.models.Role;
+import severino.com.severino.models.UserEntity;
+import severino.com.severino.repository.RoleRepository;
+import severino.com.severino.repository.UserRepository;
+import severino.com.severino.service.UserService;
 
 import java.util.Arrays;
 @Service

@@ -1,4 +1,4 @@
-package severino.com.tentativa2.models;
+package severino.com.severino.models;
 
 
 import jakarta.persistence.*;

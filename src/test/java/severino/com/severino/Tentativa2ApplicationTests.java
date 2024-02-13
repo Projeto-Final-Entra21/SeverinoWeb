@@ -1,4 +1,4 @@
-package severino.com.tentativa2;
+package severino.com.severino;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

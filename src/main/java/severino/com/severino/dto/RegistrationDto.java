@@ -1,9 +1,7 @@
-package severino.com.tentativa2.dto;
+package severino.com.severino.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
-
-import java.util.Date;
 
 @Data
 
