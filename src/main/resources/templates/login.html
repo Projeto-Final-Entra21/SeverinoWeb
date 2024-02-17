@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-<div th:if="${param.error}">
-    Email ou Senha Inválidos
-</div>
-<div th:if="${param.logout}">
-    Você Saiu Da Conta Com Sucesso!
-</div>
-<form method="post" role="form" th:action="@{/login}">
-    <input
+<main>
+    <div> <img src="/assets/logo-branca_2.png" class="logo"></div>
+    <div class="divisaoCentral">
+        <div class="divisaoCentral__itens">
 
-        id="username"
-        type="text"
-        class=""
-        placeholder="Nome De Usuario"
-        name="username"
-    >
-    <input
-        id="password"
-        type="password"
-        class=""
-        placeholder="Senha"
-        name="password"
-    >
-    <div>
-        <p>Não Possue Uma Conta?</p>
-        <button th:href="@{/register}" type="submit">Registre-se</button>
-        <button type="submit" value="Log in">Entrar</button>
+            <div th:if="${param.logout}" class="item">
+                Você Saiu Da Conta Com Sucesso!
+            </div>
+            <form method="post" role="form" th:action="@{/login}">
+                <p class="item">Nome do usuário: </p>
+                <input
+                        id="username"
+                        type="text"
+                        class=""
+                        name="username"
+                >
+                <p class="item">Senha:</p>
+                <input
+                        id="password"
+                        type="password"
+                        class=""
+                        name="password"
+                >
+                <div class="item divBotao">
+                    <button class="botao" type="submit" value="Log in">Entrar</button>
+                </div>
+                <div class="item registre">
+                    <p>Não Possue Uma Conta?</p>
+                    <a href="/register" type="submit">Registre-se</a>
+                </div>
+                <div th:if="${param.error}" class="item erro">
+                    Nome do usuário ou Senha Inválidos
+                </div>
+            </form>
+        </div>
     </div>
+</main>
 
-
-</form>
 
 </body>
 </html>
