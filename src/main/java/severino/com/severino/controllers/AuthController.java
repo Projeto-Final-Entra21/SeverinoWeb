@@ -46,6 +46,6 @@ public class AuthController {
             return "register";
         }
         userService.saveUser(user);
-        return "redirect:/centralPage?success";
+        return "redirect:/account?success";
     }
 }

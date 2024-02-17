@@ -36,7 +36,7 @@ public class SecurityConfig {
             http.authorizeHttpRequests(requests -> requests
                     .requestMatchers(
                             "/",
-                            "/centralPage",
+                            "/",
                             "/login",
                             "/register",
                             "/register/**",
@@ -52,7 +52,7 @@ public class SecurityConfig {
 
             http.formLogin(login -> login
                     .loginPage("/login")
-                    .defaultSuccessUrl("/centralPage")
+                    .defaultSuccessUrl("/account")
                     .loginProcessingUrl("/login")
                     .failureUrl("/login?error=true")
                     .permitAll()
