@@ -10,6 +10,34 @@
 </div>
 <p th:text="${email}"></p>
 
+<div th:if="${message}">
+    <h2 th:text="${message}"></h2>
+</div>
 
+<div>
+    <form method="POST" enctype="multipart/form-data" action="/add/update-photo">
+        <table>
+            <tr>
+                <td>File to upload:</td>
+                <td>
+                    <input type="file" name="photo" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Upload" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div>
+    <ul>
+        <li th:each="file : ${files}">
+            <a th:href="${file}" th:text="${file}"></a>
+        </li>
+    </ul>
+</div>
 </body>
 </html>

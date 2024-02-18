@@ -26,6 +26,7 @@ public class UserEntity {
     private String birthday;
     private String worker;
     private String gender;
+    private String photo;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "users_roles",

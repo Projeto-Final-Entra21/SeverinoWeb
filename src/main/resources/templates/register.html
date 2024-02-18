@@ -3,51 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-<div th:if="${param.fail}">
-    Email ou Nome Ja Estão Sendo Usados!
-</div>
-<form  method="post" role="form" th:action="@{/register/save}" th:object="${user}">
-<p>Nome Completo</p>
-<input type="text" name="username" id="username" th:field="${user.username}">
-
-<p>Email</p>
-<input type="text" name="username" id="email" th:field="${user.email}">
-
-
-<p>Password</p>
-<input type="password" name="password" id="password" th:field="${user.password}">
-
-<p>Genêrp</p>
-<input type="radio" name="gender" id="female" th:field="${user.gender}" value="Female"> Feminino
-<input type="radio" name="gender" id="male" th:field="${user.gender}" value="Male"> Masculino
-<input type="radio" name="gender" id="others" th:field="${user.gender}"value="Others"> Outros
-
-<p>UF</p>
-<input type="text" name="UF" id="UF" th:field="${user.UF}">
-
-<p>Cidade</p>
-<input type="text" name="city" id="city" th:field="${user.city}">
-
-<p>Data De Nascimento</p>
-<input type="date" name="birthday" id="birthday" th:field="${user.birthday}">
-
-<p>Voce Veio Buscar Ou Fornecer</p>
-<input type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">
-<input type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">
-
-<p>CPF</p>
-<input type="text" name="username" id="CPF" th:field="${user.CPF}">
-
-<button type="submit">Enviar</button>
-
+<header class="cabecalho">
     <div>
-        <p th:if="${#fields.hasErrors('password')}"></p>
-        <button th:href="@{/login}" type="submit">Login</button>
-        <button th:href="@{/register}" type="submit">Registar-se</button>
+        <img class="logoCabecalho" src="/assets/logo-branca_2.png">
+    </div>
+    <div class="linkCabecalho">
+        <a class="linkAcesso" href="login">Login</a>
+        <a class="linkAcesso" href="#">Sobre Nós</a>
+    </div>
+</header>
+<main>
+    <div>
+        <div>
+            <h1>Conteudo</h1>
+        </div>
+        <div class="caixaDeCadastro">
+            <div th:if="${param.fail}">
+                Email ou Nome Ja Estão Sendo Usados!
+            </div>
+            <form  method="post" role="form" th:action="@{/register/save}" th:object="${user}">
+                <p>Nome Completo</p>
+                <input type="text" name="username" id="username" th:field="${user.username}">
+
+                <p>Email</p>
+                <input type="text" name="username" id="email" th:field="${user.email}">
+
+
+                <p>Password</p>
+                <input type="password" name="password" id="password" th:field="${user.password}">
+
+                <div>
+                    <p>Genêro</p>
+                    <input type="radio" name="gender" id="female" th:field="${user.gender}" value="Female"> Feminino
+                    <input type="radio" name="gender" id="male" th:field="${user.gender}" value="Male"> Masculino
+                    <input type="radio" name="gender" id="others" th:field="${user.gender}"value="Others"> Outros
+
+                </div>
+
+                <p>UF</p>
+                <input type="text" name="UF" id="UF" th:field="${user.UF}">
+
+                <p>Cidade</p>
+                <input type="text" name="city" id="city" th:field="${user.city}">
+
+                <p>Data De Nascimento</p>
+                <input type="date" name="birthday" id="birthday" th:field="${user.birthday}">
+
+                <p>Voce Veio Buscar Ou Fornecer</p>
+                <input type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">
+                <input type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">
+
+                <p>CPF</p>
+                <input type="text" name="username" id="CPF" th:field="${user.CPF}">
+
+                <button type="submit">Enviar</button>
+
+                <div>
+                    <p th:if="${#fields.hasErrors('password')}"></p>
+                    <button th:href="@{/login}" type="submit">Login</button>
+                    <button th:href="@{/register}" type="submit">Registar-se</button>
+                </div>
+
+            </form>
+        </div>
     </div>
 
-</form>
+</main>
+
 </body>
 </html>
