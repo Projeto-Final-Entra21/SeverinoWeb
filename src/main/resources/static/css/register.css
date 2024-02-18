@@ -8,11 +8,19 @@ body{
     background-image: url("/static/assets/pattern2.png");
 }
 
+.divisaoCentral {
+    display: flex;
+    justify-content: space-around;
+}
+
 .caixaDeCadastro{
     background: rgba(40, 77, 124, 0.47);
     padding: 2rem 3rem;
     border-radius: 15px;
     margin-top: 3em;
+    width: 30rem;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.85);
 }
 
 input {
@@ -28,6 +36,45 @@ input {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin:0 0 1em 0;
+}
+
+.organizadorDeOpcoes{
+    display: flex;
+}
+
+.opcaoDeUsoCadastro{
+    margin-left: 0;
+}
+
+.botao {
+    background: #3d3d3d;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 4.5rem;
+    color: white;
+    border: none;
+    transition: all;
+}
+
+.botao:hover {
+    background: rgb(17, 17, 63);
+}
+
+.botao:active {
+    background: #284d7c;
+}
+
+.divBotao{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.erro{
+    font-size: 1rem;
+    color: darkred;
 }
 
 h1 {

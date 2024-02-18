@@ -17,15 +17,15 @@
     </div>
 </header>
 <main>
-    <div>
+    <div class="divisaoCentral">
         <div>
             <h1>Conteudo</h1>
         </div>
         <div class="caixaDeCadastro">
-            <div th:if="${param.fail}">
-                Email ou Nome Ja Estão Sendo Usados!
-            </div>
             <form  method="post" role="form" th:action="@{/register/save}" th:object="${user}">
+                <div class="erro" th:if="${param.fail}">
+                    Este e-mail já tem uma conta aqui!
+                </div>
                 <p>Nome Completo</p>
                 <input type="text" name="username" id="username" th:field="${user.username}">
 
@@ -36,12 +36,14 @@
                 <p>Password</p>
                 <input type="password" name="password" id="password" th:field="${user.password}">
 
-                <div>
-                    <p>Genêro</p>
+                <p>CPF</p>
+                <input type="text" name="username" id="CPF" th:field="${user.CPF}">
+
+                <p>Genêro</p>
+                <div class="organizadorDeOpcoes">
                     <input type="radio" name="gender" id="female" th:field="${user.gender}" value="Female"> Feminino
                     <input type="radio" name="gender" id="male" th:field="${user.gender}" value="Male"> Masculino
                     <input type="radio" name="gender" id="others" th:field="${user.gender}"value="Others"> Outros
-
                 </div>
 
                 <p>UF</p>
@@ -53,22 +55,21 @@
                 <p>Data De Nascimento</p>
                 <input type="date" name="birthday" id="birthday" th:field="${user.birthday}">
 
-                <p>Voce Veio Buscar Ou Fornecer</p>
-                <input type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">
-                <input type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">
-
-                <p>CPF</p>
-                <input type="text" name="username" id="CPF" th:field="${user.CPF}">
-
-                <button type="submit">Enviar</button>
+                <p>Qual sua opção de uso do Severino?</p>
+                <div class="organizadorDeOpcoes">
+                    <input class="opcaoDeUsoCadastro" type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">Profissional
+                    <input class="opcaoDeUsoCadastro" type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">Cliente
+                </div>
+                <div class="divBotao">
+                    <button class="botao" type="submit">Enviar</button>
+                </div>
 
                 <div>
                     <p th:if="${#fields.hasErrors('password')}"></p>
-                    <button th:href="@{/login}" type="submit">Login</button>
-                    <button th:href="@{/register}" type="submit">Registar-se</button>
                 </div>
 
             </form>
+
         </div>
     </div>
 
