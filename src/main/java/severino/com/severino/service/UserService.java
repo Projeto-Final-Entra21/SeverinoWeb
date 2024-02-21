@@ -8,5 +8,7 @@ public interface UserService {
 
     UserEntity findByEmail(String email);
 
+    void updateUser(UserEntity user);
+
     UserEntity findByUsername(String username);
 }

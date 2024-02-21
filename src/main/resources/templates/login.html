@@ -14,6 +14,9 @@
             <div th:if="${param.logout}" class="item">
                 Você Saiu Da Conta Com Sucesso!
             </div>
+            <div th:if="${param.sucess}">
+                Sucesso
+            </div>
             <form method="post" role="form" th:action="@{/login}">
                 <p class="item">Nome do usuário: </p>
                 <input

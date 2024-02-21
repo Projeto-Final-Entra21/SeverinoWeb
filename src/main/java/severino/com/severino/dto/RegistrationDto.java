@@ -5,7 +5,8 @@ import lombok.Data;
 
 @Data
 
-public class RegistrationDto {
+public class
+RegistrationDto {
     private Long id;
     @NotEmpty
     private String username;
