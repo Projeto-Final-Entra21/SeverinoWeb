@@ -7,11 +7,11 @@
 <body>
 <header th:replace="~{complements/header :: header}"></header>
 
-</div>
+
 <div th:text="${user.username}"></div>
 <div th:text="${user.city}"></div>
 <div th:text="${user.email}"></div>
-<img th:src="${imagePath}" alt="Foto de Perfil">
+<img th:src="'/files/'+${user.photo}" alt="Foto de Perfil">
 
 
 <div th:if="${message}">

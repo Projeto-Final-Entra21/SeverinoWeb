@@ -1,4 +1,4 @@
-package severino.com.severino.uploadingFiles.Storage;
+package severino.com.severino.storage;
 
 public class StorageException extends RuntimeException {
 

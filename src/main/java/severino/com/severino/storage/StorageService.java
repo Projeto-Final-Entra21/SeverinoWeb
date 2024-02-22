@@ -1,4 +1,4 @@
-package severino.com.severino.uploadingFiles.Storage;
+package severino.com.severino.storage;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

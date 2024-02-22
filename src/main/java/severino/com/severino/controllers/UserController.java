@@ -1,21 +1,17 @@
 package severino.com.severino.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 import severino.com.severino.models.UserEntity;
 import severino.com.severino.repository.UserRepository;
 import severino.com.severino.security.SecurityService;
 import severino.com.severino.service.UserService;
-import severino.com.severino.uploadingFiles.Storage.StorageService;
+import severino.com.severino.storage.StorageService;
 
 import java.util.Optional;
 
