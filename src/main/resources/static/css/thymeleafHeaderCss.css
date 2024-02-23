@@ -1,0 +1,21 @@
+.cabecalho{
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(35,30,115);
+    background: linear-gradient(90deg, rgba(35,30,115,1) 8%, rgba(16,16,154,1) 48%, rgba(10,154,184,1) 98%);
+    height: 3rem;
+    align-items: center;
+    width: 100%;
+}
+.fontsLinks{
+    color:white;
+    text-decoration: none;
+}
+.buttons{
+    padding: 0.5rem;
+    background: #284d7c;
+    border-radius: 10px;
+    border-color: #093460;
+}
