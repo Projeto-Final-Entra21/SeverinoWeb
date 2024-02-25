@@ -75,4 +75,29 @@ public class UserController {
         return "find-services";
 
     }
+
+    @PostMapping("/update-user")
+    public String updateUser(
+            @RequestPart("photo") MultipartFile photo,
+            @RequestPart("description")String description
+            ) {
+
+        Optional<UserEntity> optionalLoggedUser = securityService.getSessionUser();
+
+        if (optionalLoggedUser.isEmpty()) {
+            return "redirect:/login";
+        }
+
+        UserEntity user = optionalLoggedUser.get();
+        user.setDescription(description);
+        if(!photo.isEmpty()){
+            storageService.store(photo);
+            user.setPhoto(photo.getOriginalFilename());
+        }
+
+        userService.updateUser(user);
+
+        return "redirect:/account";
+
+    }
 }

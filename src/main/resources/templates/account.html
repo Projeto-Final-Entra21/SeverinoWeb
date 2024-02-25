@@ -10,53 +10,39 @@
 <header th:replace="~{/complements/header :: header}"></header>
 
 <div class="itensPerfil">
-    <div>
-        <div th:text="${user.username}"></div>
-        <div th:text="${user.city}"></div>
-        <p>Descrição: <span th:text="${user.description}"></span></p>
-        <form action="/salvarDescricao" method="post">
-            <input type="hidden" th:field="*{user}" />
-            <textarea rows="4" cols="50" th:field="*{user.description}"></textarea>
-            <br/>
-            <button type="submit">Salvar Descrição</button>
-        </form>
-    </div>
 
-    <div class="fotoDePerfil">
-        <div class="iconesDaFoto">
-            <form method="POST" enctype="multipart/form-data" action="/add/update-photo">
-                <table>
-                    <div clas="max-width">
-                        <div class="imageContainer">
-                            <img th:if="${user.photo == null}" src="/assets/big-photo-camera.png" alt="Default Camera Image" class="imgPhoto" id="imgPhoto"/>
-                            <img th:if="${user.photo != null}" th:src="'/files/'+${user.photo}" alt="User Profile Image" class="imgPhoto" id="imgPhoto"/>
-                        </div>
+    <form method="POST" enctype="multipart/form-data" action="/update-user">
+
+        <div class="fotoDePerfil">
+            <div class="iconesDaFoto">
+                <div clas="max-width">
+                    <div class="imageContainer">
+                        <img th:if="${user.photo == null}" src="/assets/big-photo-camera.png" alt="Default Camera Image"
+                             class="imgPhoto" id="imgPhoto"/>
+                        <img th:if="${user.photo != null}" th:src="'/files/'+${user.photo}" alt="User Profile Image"
+                             class="imgPhoto" id="imgPhoto"/>
                     </div>
-
-                    <tr>
-                        <td class="divBotao">Clique na foto para altera-la. Depois clique em ...</td>
-                        <td>
-                            <input type="file" id="flImage" name="photo" accept="image/*" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="divBotao">
-                            <input type="submit" value="Salvar"  class="botaoSalvar"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
+                </div>
+                <input type="file" id="flImage" name="photo" accept="image/*"/>
+            </div>
         </div>
-    </div>
-</div>
+        <div>
+            <div th:text="${user.username}"></div>
+            <div th:text="${user.city}"></div>
+            <p>Descrição:</p>
+            <textarea rows="4" cols="50" th:field="*{user.description}" name="description"></textarea>
+        </div>
+        <div class="divBotao">
+            <input type="submit" value="Salvar" class="botaoSalvar"/>
+        </div>
+    </form>
 
+</div>
 
 
 <div th:if="${message}">
     <h2 th:text="${message}"></h2>
 </div>
-
-
 
 
 <div>
