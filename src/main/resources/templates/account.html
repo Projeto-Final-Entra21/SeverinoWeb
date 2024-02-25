@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Perfil</title>
+    <link rel="stylesheet" href="/css/accont.css">
+    <script src="/JS/accont.js" defer></script>
 </head>
 <body>
 <header th:replace="~{/complements/header :: header}"></header>
 
+<div class="itensPerfil">
+    <div th:text="${user.username}"></div>
+    <div th:text="${user.city}"></div>
+    <div th:text="${user.email}"></div>
+    <div class="fotoDePerfil">
+        <div class="iconesDaFoto">
+            <form method="POST" enctype="multipart/form-data" action="/add/update-photo">
+                <table>
+                    <div clas="max-width">
+                        <div class="imageContainer">
+                            <img th:if="${user.photo == null}" src="/assets/big-photo-camera.png" alt="Default Camera Image" class="imgPhoto" id="imgPhoto"/>
+                            <img th:if="${user.photo != null}" th:src="'/files/'+${user.photo}" alt="User Profile Image" class="imgPhoto" id="imgPhoto"/>
+                        </div>
+                    </div>
 
-<div th:text="${user.username}"></div>
-<div th:text="${user.city}"></div>
-<div th:text="${user.email}"></div>
-<img th:src="'/files/'+${user.photo}" alt="Foto de Perfil">
+                    <tr>
+                        <td>File to upload:</td>
+                        <td>
+                            <input type="file" id="flImage" name="photo" accept="image/*" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Upload" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 
 <div th:if="${message}">
@@ -19,23 +48,7 @@
 </div>
 
 
-<div>
-    <form method="POST" enctype="multipart/form-data" action="/add/update-photo">
-        <table>
-            <tr>
-                <td>File to upload:</td>
-                <td>
-                    <input type="file" name="photo" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Upload" />
-                </td>
-            </tr>
-        </table>
-    </form>
-</div>
+
 
 <div>
     <ul>
