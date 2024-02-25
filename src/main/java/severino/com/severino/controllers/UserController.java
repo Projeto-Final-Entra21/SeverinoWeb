@@ -13,6 +13,7 @@ import severino.com.severino.security.SecurityService;
 import severino.com.severino.service.UserService;
 import severino.com.severino.storage.StorageService;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -35,6 +36,7 @@ public class UserController {
 
         optionalLoggedUser.ifPresent(user -> model.addAttribute("user", user));
 
+
         return "account";
 
     }
@@ -56,6 +58,21 @@ public class UserController {
         userService.updateUser(user);
 
         return "redirect:/account";
+
+    }
+
+    @GetMapping("/find-services")
+    public String getFindService(Model model) {
+
+        List<UserEntity> optionalLoggedUser = userRepository.findAll();
+
+        if (optionalLoggedUser.isEmpty()) {
+            return "redirect:/login";
+        }
+
+        optionalLoggedUser.forEach(user -> model.addAttribute("user", user));
+
+        return "find-services";
 
     }
 }
