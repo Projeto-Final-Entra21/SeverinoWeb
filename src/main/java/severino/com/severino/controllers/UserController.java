@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 import severino.com.severino.models.UserEntity;
+import severino.com.severino.repository.RoleRepository;
 import severino.com.severino.repository.UserRepository;
 import severino.com.severino.security.SecurityService;
 import severino.com.severino.service.UserService;
@@ -24,6 +25,7 @@ public class UserController {
     private final UserRepository userRepository;
     private final SecurityService securityService;
     private final UserService userService;
+    private final RoleRepository roleRepository;
 
     @GetMapping("/account")
     public String getAccountPage(Model model) {
@@ -61,20 +63,6 @@ public class UserController {
 
     }
 
-    @GetMapping("/find-services")
-    public String getFindService(Model model) {
-
-        List<UserEntity> optionalLoggedUser = userRepository.findAll();
-
-        if (optionalLoggedUser.isEmpty()) {
-            return "redirect:/login";
-        }
-
-        optionalLoggedUser.forEach(user -> model.addAttribute("user", user));
-
-        return "find-services";
-
-    }
 
     @PostMapping("/update-user")
     public String updateUser(

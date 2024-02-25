@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <title>Buscar Serviços</title>
 </head>
+<header th:replace="~{/complements/header :: header}"></header>
+
 <body>
-<div th:text="${user.username}"></div>
-<div th:text="${user.city}"></div>
-<div th:text="${user.email}"></div>
-<div th:text="${user.worker}"></div>
+<div>
+    <h3>Profissão</h3>
+    <form method="POST" enctype="multipart/form-data" action="/filter-services">
+
+        <div>
+            <p>Descrição:</p>
+            <textarea rows="4" cols="50" name="filter"></textarea>
+        </div>
+        <div class="divBotao">
+            <input type="submit" value="Filtrar" class="botaoFiltrar"/>
+        </div>
+    </form>
+</div>
+
+<div>
+    <h3>Profissões</h3>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Profissão</th>
+            <th>Profissionais</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tempRole:${roles}">
+            <td th:text="${tempRole.name}" />
+            <td>
+                <div th:each="tempUser:${tempRole.users}">
+                    <div th:text="${tempUser.username}"></div>
+                    <div th:text="${tempUser.city}"></div>
+                    <div th:text="${tempUser.email}"></div>
+                    <div clas="max-width">
+                        <div class="imageContainer">
+                            <img th:if="${tempUser.photo == null}" src="/assets/big-photo-camera.png" alt="Default Camera Image" class="imgPhoto" id="imgPhoto" />
+                            <img th:if="${tempUser.photo != null}" th:src="'/files/'+${tempUser.photo}" alt="User Profile Image" class="imgPhoto" id="imgPhoto" />
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+
 </body>
 </html>
