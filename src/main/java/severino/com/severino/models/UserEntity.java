@@ -32,6 +32,7 @@ public class UserEntity implements UserDetails {
     private String worker;
     private String gender;
     private String photo;
+    private String job;
     private String description;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(

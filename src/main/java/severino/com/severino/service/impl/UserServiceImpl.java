@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserService {
         user.setBirthday(registrationDto.getBirthday());
         user.setWorker((registrationDto.getWorker()));
         user.setGender(registrationDto.getGender());
+        user.setJob(registrationDto.getJob());
         Role role = roleRepository.findByName("USER");
         user.setRoles(Arrays.asList(role));
         userRepository.save(user);

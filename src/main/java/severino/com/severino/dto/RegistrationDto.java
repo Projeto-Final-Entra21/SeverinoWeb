@@ -24,4 +24,5 @@ RegistrationDto {
     private String birthday;
     private String worker;
     private String gender;
+    private String job;
 }

@@ -5,7 +5,8 @@
 }
 
 .cabecalho{
-    background: linear-gradient(#3d3d3d, #093460);
+    background: rgb(35,30,115);
+    background: linear-gradient(90deg, rgba(35,30,115,1) 0%, rgba(16,16,154,1) 41%, rgba(10,154,184,1) 83%);
     height: 6.8rem;
     display: flex;
     justify-content: space-between;

@@ -5,6 +5,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="../static/css/register.css">
 </head>
 <body>
 <header class="cabecalho">
@@ -18,8 +19,8 @@
 </header>
 <main>
     <div class="divisaoCentral">
-        <div>
-            <p>
+        <div class="boxTextoApresentativo">
+            <p class="textoApresentativo">
             &emsp; Olá, Seja Bem Vindo ao Severino! <br><br>
             &emsp;Para começar, precisamos que você
             faça o seu cadastro.<br>&emsp; Por favor forneça suas informações pessoais, assim você terá um cadastro
@@ -66,6 +67,15 @@
                 <div class="organizadorDeOpcoes">
                     <input class="opcaoDeUsoCadastro" type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">Profissional
                     <input class="opcaoDeUsoCadastro" type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">Cliente
+                </div>
+                <div>
+                    <select th:field="${user.job}">
+                        <option value="Pedreiro">Mestre De Obra</option>
+                        <option value="Pedreiro">Confeiteira</option>
+                        <option value="Pedreiro">Costureira</option>
+                        <option value="Pedreiro">Diarista</option>
+                        <option value="Pedreiro">Eletricista</option>
+                    </select>
                 </div>
                 <div class="divBotao">
                     <button class="botao" type="submit">Enviar</button>

@@ -43,7 +43,8 @@ public class SecurityConfig {
                             "/css/**",
                             "/assets/**",
                             "/files/**",
-                            "/public/**"
+                            "/public/**",
+                            "/about"
                     )
                     .permitAll()
                     .anyRequest()

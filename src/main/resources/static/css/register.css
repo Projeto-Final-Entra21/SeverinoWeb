@@ -7,6 +7,18 @@
 body{
     background-image: url("/static/assets/pattern2.png");
 }
+.boxTextoApresentativo{
+    background: rgba(40, 77, 124, 0.47);
+    width: 25rem;
+    height: 28rem;
+    margin-top: 4em;
+    padding: 2rem;
+    border-radius: 20px;
+}
+.textoApresentativo{
+    font-family: Arial;
+    font-size: 1.3rem;
+}
 
 .divisaoCentral {
     display: flex;
