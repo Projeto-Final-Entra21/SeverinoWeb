@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="../static/css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"/>>
+    <script src="/JS/cadastro.js" defer></script>
+    <script src="/JS/jquery.js" defer></script>
+    
+    <script>
+        $('#worker').click(function () {
+            $('.selectPro').slideDown("slow"); <!--Arrumar--><!--Arrumar--><!--Arrumar-->
+        });
+    </script>
+
 </head>
 <body>
 <header class="cabecalho">
@@ -30,22 +41,20 @@
             </p>
         </div>
         <div class="caixaDeCadastro">
-            <form  method="post" role="form" th:action="@{/register/save}" th:object="${user}">
+            <form class="caixaDeCadastro-form" method="post" role="form" th:action="@{/register/save}" th:object="${user}">
                 <div class="erro" th:if="${param.fail}">
                     Este e-mail já tem uma conta aqui!
                 </div>
-                <p>Nome Completo</p>
-                <input type="text" name="username" id="username" th:field="${user.username}">
 
-                <p>Email</p>
-                <input type="text" name="username" id="email" th:field="${user.email}">
+                <input class="info" type="text" name="username" id="username" placeholder="Nome completo" th:field="${user.username}">
 
 
-                <p>Senha</p>
-                <input type="password" name="password" id="password" th:field="${user.password}">
+                <input class="info" type="text" name="username" id="email" placeholder="E-mail" th:field="${user.email}">
 
-                <p>CPF</p>
-                <input type="text" name="username" id="CPF" th:field="${user.CPF}">
+
+                <input class="info" type="password" name="password" id="password" placeholder="Senha" th:field="${user.password}">
+
+                <input class="info" type="text" name="username" id="CPF" placeholder="CPF" oninput="formatarCPF(this)" maxlength="14" minlength="14" th:field="${user.CPF}">
 
                 <p>Gênero</p>
                 <div class="organizadorDeOpcoes">
@@ -54,29 +63,28 @@
                     <input type="radio" name="gender" id="others" th:field="${user.gender}"value="Others"> Outros
                 </div>
 
-                <p>UF</p>
-                <input type="text" name="UF" id="UF" th:field="${user.UF}">
+                <input class="info" type="text" name="UF" id="UF" placeholder="Estado" th:field="${user.UF}">
 
-                <p>Cidade</p>
-                <input type="text" name="city" id="city" th:field="${user.city}">
+                <input class="info" type="text" name="city" id="city" placeholder="Cidade" th:field="${user.city}">
 
                 <p>Data De Nascimento</p>
-                <input type="date" name="birthday" id="birthday" th:field="${user.birthday}">
+                <input class="info" type="date" name="birthday" id="birthday" th:field="${user.birthday}">
 
                 <p>Qual sua opção de uso do Severino?</p>
                 <div class="organizadorDeOpcoes">
                     <input class="opcaoDeUsoCadastro" type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">Profissional
                     <input class="opcaoDeUsoCadastro" type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">Cliente
+                    <div class="selectPro">
+                        <select th:field="${user.job}">
+                            <option value="Pedreiro">Mestre De Obra</option>
+                            <option value="Pedreiro">Confeiteira</option>
+                            <option value="Pedreiro">Costureira</option>
+                            <option value="Pedreiro">Diarista</option>
+                            <option value="Pedreiro">Eletricista</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <select th:field="${user.job}">
-                        <option value="Pedreiro">Mestre De Obra</option>
-                        <option value="Pedreiro">Confeiteira</option>
-                        <option value="Pedreiro">Costureira</option>
-                        <option value="Pedreiro">Diarista</option>
-                        <option value="Pedreiro">Eletricista</option>
-                    </select>
-                </div>
+
                 <div class="divBotao">
                     <button class="botao" type="submit">Enviar</button>
                 </div>
@@ -89,8 +97,18 @@
 
         </div>
     </div>
+    <footer class="app__footer">
+        <p class="app__footer-text">
+            Projeto executado por alunos do programa Entra21 - 2023 no curso de Lógica de Java.
+            <br>
+            <a href="https://www.linkedin.com/in/gustavohenriquerambo/">Gustavo Henrique Rambo</a>  |
+            <a href="https://www.linkedin.com/in/andr%C3%A9-ullrich-54aa11251">André Luis Ullrich Valverde</a>  |
+            <a href="https://www.linkedin.com/in/felipe-gabriel-haerthel-b47b3a27a ">Felipe Gabriel Haerthel</a>  |
+            <a href="https://www.linkedin.com/in/gabriel-marquioli-b6040b2a6/">Gabriel Marquioli dos Santos</a>
+        </p>
+    </footer>
 
 </main>
-
 </body>
+
 </html>

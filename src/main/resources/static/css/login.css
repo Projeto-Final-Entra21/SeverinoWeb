@@ -56,6 +56,11 @@ input {
     font-weight: 400;
     line-height: normal;
 }
+#password:focus, #username:focus{
+    border: 2px solid rgb(27, 116, 228);
+    box-shadow: rgba(68, 131, 208, 0.345) 0px 0px 0px 2px;
+    outline: none;
+}
 
 .divBotao{
     display: flex;
