@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
-rel="stylesheet"/>>
+rel="stylesheet"/>
     <script src="/JS/cadastro.js" defer></script>
 
 </head>
@@ -25,9 +25,9 @@ rel="stylesheet"/>>
         <div class="colunaComImagem">
             <div class>
                 <p class="textoApresentativo">
-                    &emsp; Olá, Seja Bem Vindo ao Severino! <br><br>
+                    &emsp;Olá, Seja Bem Vindo ao Severino! <br><br>
                     &emsp;Para começar, precisamos que você
-                    faça o seu cadastro.<br>&emsp; Por favor forneça suas informações pessoais, assim você terá um cadastro
+                    faça o seu cadastro.<br>&emsp;Por favor forneça suas informações pessoais, assim você terá um cadastro
                     seguro, e outras pessoas poderão confiar em você da mesma maneira que elas serão de confiança.
                     O cadastro é único, significando que através de seu Cadastro de Pessoa Física serão mantidas
                     informações para evitar fraudes, golpes e quebras de nossos <a href="#" class="termos">Termos de Serviço</a> (TOS).
@@ -70,15 +70,6 @@ rel="stylesheet"/>>
                 <div class="organizadorDeOpcoes">
                     <input class="opcaoDeUsoCadastro" type="radio" name="worker" id="worker" th:field="${user.worker}" value="WORKER">Profissional
                     <input class="opcaoDeUsoCadastro" type="radio" name="notWorker" id="notWorker" th:field="${user.worker}" value="notWORKER">Cliente
-                    <div class="selectPro">
-                        <select th:field="${user.job}">
-                            <option value="Pedreiro">Mestre De Obra</option>
-                            <option value="Pedreiro">Confeiteira</option>
-                            <option value="Pedreiro">Costureira</option>
-                            <option value="Pedreiro">Diarista</option>
-                            <option value="Pedreiro">Eletricista</option>
-                        </select>
-                    </div>
                 </div>
 
                 <div class="divBotao">
