@@ -4,11 +4,11 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root{
-    --azul-royal: #3f589e;
+    --azul-royal: #1d4983;
 }
 .cabecalho{
     outline: solid var(--azul-royal);
-    background-color: rgba(137, 96, 226, 0.176);
+    background-color: rgba(25, 9, 70, 0.17);
     height: 7rem;
     display: flex;
     justify-content: space-between;
