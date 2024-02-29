@@ -71,6 +71,13 @@ textarea{
     border: 5px solid #093460;
 }
 
+.cabecalho_wrapper{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin-top: 3.1rem;
+}
+
 .descInfo{
     margin: 1rem;
     background-color: aliceblue;
