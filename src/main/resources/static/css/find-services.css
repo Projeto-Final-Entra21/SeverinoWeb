@@ -6,20 +6,26 @@ h3{
     margin: 5em 4em 2em 4em;
     text-align: center;
     font-size: 30px;
+    color: #164e85;
 }
+
 .banner__pesquisa {
     background-color: transparent;
     border: 1px solid #cccccc;
     color: #cccccc;
     border-radius: 24px;
-    padding: 1em;
-    width: 100%;
+    padding: 1.5em;
+    margin: 1em 8em;
+    text-align: center;
+    width: 30rem;
+    font-size: 20px;
+    height: auto;
 }
 
 .banner__pesquisa::placeholder {
-
-    font-size: 14px;
-    font-weight: 400;text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
     color: #cccccc;
     background-position: 0.8em;
 }
@@ -41,4 +47,65 @@ h3{
 
 .botao:active {
     background: #284d7c;
+}
+
+.divBotao{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-details {
+    margin-left: 10px;
+}
+
+.tabela {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tabela table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela th, .tabela td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.tabela td {
+    vertical-align: top;
+}
+
+.imageContainer {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.imgPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

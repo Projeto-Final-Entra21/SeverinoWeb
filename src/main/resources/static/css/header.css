@@ -11,7 +11,6 @@
     background-color: rgba(50, 69, 164, 0.77);
     height: 10rem;
     display: flex;
-    height: 12rem;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +18,7 @@
 }
 
 .logoCabecalho {
-    height: 13rem;
+    height: 11rem;
     position: absolute;
 }
 

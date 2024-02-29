@@ -17,11 +17,12 @@
 </header>
 <body>
 <div>
-    <h3>O Severino não é apenas uma plataforma de conexão de pessoas autônomas; é uma comunidade que incentiva o crescimento e a excelência. Estamos comprometidos em fornecer um ambiente seguro e confiável para que você encontre os melhores profissionais para suas necessidades.</h3>
+    <h3>O Severino não é apenas uma plataforma de conexão de pessoas autônomas; é uma comunidade que incentiva o
+        crescimento e a excelência. Estamos comprometidos em fornecer um ambiente seguro e confiável para que você
+        encontre os melhores profissionais para suas necessidades.</h3>
     <form method="POST" enctype="multipart/form-data" action="/filter-services">
-        <div>
-            <p></p>
-            <textarea name="filter" class="banner__pesquisa" placeholder="Digite aqui a profissão que deseja..."></textarea>
+        <div class="divBotao">
+            <input type="text" name="filter" class="banner__pesquisa" placeholder="Digite aqui a profissão que deseja...">
 
         </div>
         <div class="divBotao">
@@ -30,7 +31,7 @@
     </form>
 </div>
 
-<div>
+<div class="tabela">
     <h3>Profissões</h3>
     <table border="1">
         <thead>
@@ -40,25 +41,30 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="tempRole:${roles}">
-            <td th:text="${tempRole.name}" />
-            <td>
-                <div th:each="tempUser:${tempRole.users}">
-                    <div th:text="${tempUser.username}"></div>
-                    <div th:text="${tempUser.city}"></div>
-                    <div th:text="${tempUser.email}"></div>
-                    <div clas="max-width">
-                        <div class="imageContainer">
-                            <img th:if="${tempUser.photo == null}" src="/assets/big-photo-camera.png" alt="Default Camera Image" class="imgPhoto" id="imgPhoto" />
-                            <img th:if="${tempUser.photo != null}" th:src="'/files/'+${tempUser.photo}" alt="User Profile Image" class="imgPhoto" id="imgPhoto" />
+        <tr th:each="role : ${roles}">
+            <td colspan="2" th:text="${role.name}" style="text-align: center; font-weight: bold;"></td>
+        </tr>
+        <tr th:each="role : ${roles}">
+            <td colspan="2" th:text="${role.name}" style="text-align: center; font-weight: bold;"></td>
+        </tr>
+        <tr th:each="role : ${roles}">
+            <td th:each="user : ${role.users}">
+                <div class="user-info">
+                    <div class="imageContainer">
+                        <img th:if="${user.photo == null}" src="/assets/big-photo-camera.png" alt="Imagem da Câmera Padrão" class="imgPhoto" id="imgPhoto" />
+                        <img th:if="${user.photo != null}" th:src="'/files/'+${user.photo}" alt="Imagem de Perfil do Usuário" class="imgPhoto" id="imgPhoto" />
+                        <div class="user-details">
+                            <div th:text="${user.username}"></div>
+                            <div th:text="${user.city}"></div>
+                            <div th:text="${user.email}"></div>
                         </div>
                     </div>
+
                 </div>
             </td>
         </tr>
-        <tbody>
+        </tbody>
     </table>
 </div>
-
 </body>
 </html>

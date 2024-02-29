@@ -5,8 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
+import severino.com.severino.models.Role;
 import severino.com.severino.models.UserEntity;
 import severino.com.severino.repository.RoleRepository;
 import severino.com.severino.repository.UserRepository;
@@ -88,4 +90,12 @@ public class UserController {
         return "redirect:/account";
 
     }
+
+    @GetMapping("/filter-services")
+    public String filterServices(@RequestParam("filter") String filter, Model model) {
+        List<Role> roles = roleRepository.findByNameContaining(filter);
+        model.addAttribute("roles", roles);
+        return "find-services";
+    }
+
 }
