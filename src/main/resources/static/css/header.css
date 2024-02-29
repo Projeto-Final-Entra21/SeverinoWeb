@@ -9,7 +9,6 @@
 .cabecalho{
     outline: solid var(--azul-royal);
     background-color: rgba(50, 69, 164, 0.77);
-    height: 10rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -27,6 +26,7 @@
     justify-content: space-around;
     gap: 2rem;
     margin: 0 2rem 0 0;
+    padding-top: 5rem;
 }
 
 .linkAcesso{
