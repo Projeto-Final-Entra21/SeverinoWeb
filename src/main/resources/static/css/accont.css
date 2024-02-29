@@ -5,6 +5,9 @@
     border: none;
     font-family: system-ui, -apple-system, BlinkMacSyste    mFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+:root{
+    --azul-royal: #1d4983;
+}
 html{
     min-height: 100vh;
     scroll-behavior: smooth;
@@ -20,9 +23,7 @@ html{
 }
 
 body {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    
     flex-direction: column;
     min-height: 100vh;
     background-size: cover;
@@ -40,6 +41,7 @@ textarea{
 
 .itensPerfil{
     display: flex;
+    padding: 3rem;
 }
 
 #flImage{
@@ -143,4 +145,9 @@ a{
     text-decoration: none;
     font-size: 2rem;
     color: azure;
+}
+.buttons{
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #284d7c;
 }
