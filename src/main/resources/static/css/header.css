@@ -8,7 +8,7 @@
 }
 .cabecalho{
     outline: solid var(--azul-royal);
-    background-color: rgba(25, 9, 70, 0.17);
+    background-color: rgba(120, 65, 171, 0.5);
     height: 7rem;
     display: flex;
     justify-content: space-between;
