@@ -8,7 +8,8 @@
 }
 .cabecalho{
     outline: solid var(--azul-royal);
-    background-color: rgba(6, 15, 51, 0.5);
+    background-color: rgba(50, 69, 164, 0.77);
+    height: 10rem;
     display: flex;
     height: 12rem;
     justify-content: space-between;
@@ -17,7 +18,7 @@
 }
 
 .logoCabecalho {
-    height: 15rem;
+    height: 12rem;
     position: absolute;
 }
 
