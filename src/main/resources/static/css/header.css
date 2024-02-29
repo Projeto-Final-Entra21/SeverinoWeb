@@ -12,6 +12,7 @@
     height: 10rem;
     display: flex;
     height: 12rem;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 5rem;
