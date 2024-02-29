@@ -32,7 +32,7 @@
 </div>
 
 <div class="tabela">
-    <h3>Profissões</h3>
+    <h3 class="profissos">Profissões</h3>
     <table border="1">
         <thead>
         <tr>
@@ -42,14 +42,9 @@
         </thead>
         <tbody>
         <tr th:each="role : ${roles}">
-            <td colspan="2" th:text="${role.name}" style="text-align: center; font-weight: bold;"></td>
-        </tr>
-        <tr th:each="role : ${roles}">
-            <td colspan="2" th:text="${role.name}" style="text-align: center; font-weight: bold;"></td>
-        </tr>
-        <tr th:each="role : ${roles}">
-            <td th:each="user : ${role.users}">
-                <div class="user-info">
+            <td th:text="${role.name}" style="text-align: center; font-weight: bold;"></td>
+            <td>
+                <div th:each="user : ${role.users}" class="user-info">
                     <div class="imageContainer">
                         <img th:if="${user.photo == null}" src="/assets/big-photo-camera.png" alt="Imagem da Câmera Padrão" class="imgPhoto" id="imgPhoto" />
                         <img th:if="${user.photo != null}" th:src="'/files/'+${user.photo}" alt="Imagem de Perfil do Usuário" class="imgPhoto" id="imgPhoto" />
@@ -59,7 +54,6 @@
                             <div th:text="${user.email}"></div>
                         </div>
                     </div>
-
                 </div>
             </td>
         </tr>
