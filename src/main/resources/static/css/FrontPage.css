@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+
+:root {
+    --color-primary: #162445;
+    --color-secondary: #FFF;
+    --azul-royal: #3f589e;
+    --azul-profundo: #140f07;
+    --fundo-card-timer: rgba(20, 68, 128, 0.30);
+    --lils: #738dfd;
+    --linear-botes: linear-gradient(180deg, #6466cf 0%, #144480 100%);
+    --fundo-card: rgba(255, 255, 255, 0.50);
+    --fundo-card-concludo: rgba(40, 84, 143, 0.4);
+}
+
+[data-contexto] {
+    --main-bg-color: linear-gradient(180deg, #83a8ee 0%, #284d7c 48.44%, #01080E 100%);
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html {
+    background: var(--main-bg-color);
+    min-height: 100vh;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: url("../IMG/pattern.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Unbounded', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: #6175d1c4;
+}
+
+span{
+    color: #97f5e8;
+}
+.app__header {
+    outline: solid var(--azul-royal);
+    background-color: rgba(137, 96, 226, 0.176);
+    display: flex;
+    justify-content: center;
+}
+
+.app__logo-figure {
+    display: flex;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.app__logo-image {
+    width: 100%;
+    height: 10rem;
+    max-width: 40rem;
+    user-select: none;
+}
+
+.app__section-banner-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10rem 1rem 15rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10rem;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+hr {
+    border-color: #ffffff9d;
+    background-color: #ffffff9d;
+}
+
+.app__title {
+    line-height: 150%;
+    font-size: 5.2rem;
+    font-style: normal;
+    color: var(--color-secondary);
+    font-weight: 200;
+    max-width: 46rem;
+}
+
+.app__title-strong {
+    font-weight: 600;
+}
+
+.app__section-card-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-direction: column;
+}
+
+.app__card {
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--azul-royal);
+    background: var(--fundo-card-timer);
+    padding: 2.4rem;
+    margin-top: 8rem;
+    width: 100%;
+    margin-bottom: 8rem;
+    max-width: 90%;
+    margin: 8rem auto;
+}
+
+.app__card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.app__card-button {
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    background: none;
+    padding: 0.8rem;
+    color: var(--color-secondary);
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    width: fit-content;
+
+    border-radius: 15px;
+}
+
+
+#prestador {
+    border: 0.2rem solid var(--azul-royal);
+    width: 80rem;
+    position: relative;
+    padding: 2rem 2rem 7rem 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgba(137, 96, 226, 0.176);
+    color: var(--color-secondary);
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 2rem;
+    display: none;
+
+}
+
+#cliente {
+    border: 0.2rem solid var(--azul-royal);
+    width: 80rem;
+    position: relative;
+    padding: 2rem 2rem 7rem 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: rgba(137, 96, 226, 0.176);
+    color: var(--color-secondary);
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 2rem;
+    display: none;
+}
+
+.app__card-primary-button-wrapper {
+    display: flex;
+    position: absolute;
+    right: 0;
+    gap: 2rem;
+}
+
+
+.app__card-primary-button {
+    padding: 0.8rem 2.4rem;
+    box-sizing: border-box;
+    color: var(--color-secondary);
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 3.2rem;
+    background: var(--linear-botes);
+    margin: 3.2rem;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: Montserrat;
+    width: fit-content;
+}
+
+.app__card-primary-button:active {
+    background: #284d7c;
+}
+
+.app__card-button:hover {
+    background: #144480;
+}
+
+#label- {
+    color: var(--color-secondary);
+    font-family: Inter;
+    font-size: 4vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0 1rem;
+}
+
+#labelCadastro {
+    color: var(--color-secondary);
+    font-family: Inter;
+    padding: 2rem 1rem;
+    font-size: 2vh;
+}
+
+#formularioLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#emailLogin {
+    width: 411px;
+    height: 53px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.69);
+    border: none;
+    color: rgba(0, 0, 0, 0.40);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+#senhaLogin {
+    width: 411px;
+    height: 53px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.69);
+    border: none;
+    color: rgba(0, 0, 0, 0.40);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+#emailLogin:focus {
+    outline: 2px solid rgb(89, 63, 143);
+    box-shadow: rgb(137, 96, 226) 0px 0px 0px 5px;
+
+}
+
+#senhaLogin:focus {
+    outline: 2px solid rgb(89, 63, 143);
+    box-shadow: rgb(137, 96, 226) 0px 0px 0px 5px;
+
+}
+
+::placeholder {
+    padding-left: 19px;
+}
+
+.caixaLogin {
+    margin: 1rem 0 1rem 0;
+    height: 2.5rem;
+    width: 40rem;
+}
+
+#camposDeLogin {
+    border: 0.2rem solid var(--azul-royal);
+    width: fit-content;
+    position: relative;
+    padding: 2rem 2rem 7rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(137, 96, 226, 0.176);
+}
+
+.active {
+    border-radius: 2rem 2rem 0 0;
+    background: var(--azul-royal);
+}
+
+.app__card-timer {
+    color: var(--color-secondary);
+    text-align: center;
+    font-family: Unbounded;
+    font-size: 12rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 3.2rem;
+    text-align: center;
+}
+
+.app__card-list-label {
+    color: var(--color-secondary);
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.app__footer {
+    display: flex;
+    width: 100%;
+    padding: 2.8rem 6rem;
+    justify-content: center;
+    align-items: center;
+    background: #010B15;
+}
+
+.app__footer-text {
+    color: rgba(182, 182, 182, 0.8);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.app__section-task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.2rem solid var(--azul-royal);
+    background-color: rgba(137, 96, 226, 0.176);
+    padding-bottom: 4.5rem;
+}
+
+.app__section-task-content {
+    width: 80rem;
+    max-width: 90%;
+    color: #FFF;
+}
+
+.app__section-active-task {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    padding: 4rem 0;
+    border-bottom: 2px solid var(--azul-royal);
+    margin-bottom: 4rem;
+}
+
+.sobreNos {
+    font-size: 2.6rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+.sobreProjeto {
+    font-size: 2.6rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+.app__section-task-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app_button-edit,
+.app_button-more {
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
