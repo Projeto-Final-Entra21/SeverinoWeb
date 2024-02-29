@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(180deg, #83a8ee 0%, #284d7c 48.44%, #01080E 100%);
+}
+
+h3{
+    margin: 5em 4em 2em 4em;
+    text-align: center;
+    font-size: 30px;
+}
+.banner__pesquisa {
+    background-color: transparent;
+    border: 1px solid #cccccc;
+    color: #cccccc;
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+
+.banner__pesquisa::placeholder {
+
+    font-size: 14px;
+    font-weight: 400;text-align: center;
+    color: #cccccc;
+    background-position: 0.8em;
+}
