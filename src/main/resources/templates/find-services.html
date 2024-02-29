@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Buscar Serviços</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/find-services.css">
 </head>
-<header th:replace="~{/complements/header :: header}"></header>
-
+<header class="cabecalho">
+    <div>
+        <img class="logoCabecalho" src="/assets/logo-branca_2.png">
+    </div>
+    <div class="linkCabecalho">
+        <a class="linkAcesso" href="login">Login</a>
+        <a class="linkAcesso" href="#">Sobre Nós</a>
+    </div>
+</header>
 <body>
 <div>
-    <h3>Profissão</h3>
+    <h3>O Severino não é apenas uma plataforma de conexão de pessoas autônomas; é uma comunidade que incentiva o crescimento e a excelência. Estamos comprometidos em fornecer um ambiente seguro e confiável para que você encontre os melhores profissionais para suas necessidades.</h3>
     <form method="POST" enctype="multipart/form-data" action="/filter-services">
-
         <div>
-            <p>Descrição:</p>
-            <textarea rows="4" cols="50" name="filter"></textarea>
+            <p></p>
+            <textarea name="filter" class="banner__pesquisa" placeholder="Digite aqui a profissão que deseja..."></textarea>
+
         </div>
         <div class="divBotao">
             <input type="submit" value="Filtrar" class="botaoFiltrar"/>
